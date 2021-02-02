@@ -61,6 +61,7 @@ class IssuesVC: UIViewController {
         collectionView_Banner.isHidden = true
         pageControl.isHidden = true
 
+        
 
     }
     
