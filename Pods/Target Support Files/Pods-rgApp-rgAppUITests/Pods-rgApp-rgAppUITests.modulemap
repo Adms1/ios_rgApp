@@ -1,0 +1,6 @@
+framework module Pods_rgApp_rgAppUITests {
+  umbrella header "Pods-rgApp-rgAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
