@@ -60,19 +60,8 @@ class IssuesVC: UIViewController {
 
         collectionView_Banner.isHidden = true
         pageControl.isHidden = true
-//
-//        UIView.animate(withDuration: 0.5, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
-//
-//               // HERE
-//            self.img.transform = CGAffineTransform.identity.scaledBy(x: 2, y: 2) // Scale your image
-//
-//         }) { (finished) in
-//             UIView.animate(withDuration: 5, animations: {
-//
-//                self.img.transform = CGAffineTransform.identity // undo in 1 seconds
-//
-//           })
-//        }
+
+
     }
     
     @IBAction func Back_Clicked(_ sender: UIButton)
