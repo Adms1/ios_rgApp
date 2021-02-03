@@ -22,14 +22,14 @@ class WebViewController: UIViewController, WKNavigationDelegate {
 
         // Do any additional setup after loading the view.
 
-        if isBackShow == "1"
-        {
-            btnBack.isHidden = false
-        }
-        else
-        {
-            btnBack.isHidden = true
-        }
+//        if isBackShow == "1"
+//        {
+//            btnBack.isHidden = false
+//        }
+//        else
+//        {
+//            btnBack.isHidden = true
+//        }
         lblTitle.text = strTitle
         webview.navigationDelegate = self
 
@@ -51,11 +51,14 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
     @IBAction func Back_Clicked(_ sender: UIButton)
     {
+        if isBackShow == "2"
+        {
         urlLoad()
+        }else{
 //        btnBack.isHidden = true
-
 //        webview.reload()
-//        navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
+        }
     }
     @IBAction func Menu_Back_Clicked(_ sender: UIButton)
     {
@@ -83,13 +86,15 @@ class WebViewController: UIViewController, WKNavigationDelegate {
            if navigationAction.navigationType == WKNavigationType.linkActivated {
                print("link")
             
-            btnBack.isHidden = false
-
+//            btnBack.isHidden = false
+            isBackShow = "2"
             decisionHandler(WKNavigationActionPolicy.allow)
                return
            }
            print("no link")
-        btnBack.isHidden = true
+        isBackShow = ""
+
+//        btnBack.isHidden = true
         decisionHandler(WKNavigationActionPolicy.allow)
     }
 
