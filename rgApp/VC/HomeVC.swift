@@ -25,6 +25,8 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // github upload live code changes
+
                 playBackgoundVideo()
         SetLayout()
         //        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "CoverPage")!, iconInitialSize: CGSize(width: self.view.frame.width, height: self.view.frame.height), backgroundImage: UIImage(named: "CoverPage")!)
