@@ -8,7 +8,9 @@
 import UIKit
 import WebKit;
 
-class WebViewController: UIViewController, WKNavigationDelegate {
+class WebViewController: UIViewController, WKNavigationDelegate, ActivityIndicatorPresenter {
+    var activityIndicatorView = UIView()
+    var activityIndicator = UIActivityIndicatorView()
 
     @IBOutlet var webview: WKWebView!
     @IBOutlet var lblTitle : UILabel!
@@ -37,6 +39,8 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
 
     func urlLoad() {
+        showActivityIndicator()
+
         let request = NSMutableURLRequest(url: NSURL(string: strLoadUrl)! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
@@ -74,7 +78,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("finish to load")
-//        self.hideActivityIndicator()
+        self.hideActivityIndicator()
     }
 
     private func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: NSError) {

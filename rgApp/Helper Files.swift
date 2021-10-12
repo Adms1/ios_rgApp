@@ -23,11 +23,45 @@ var Persion_placeHolder = UIImage(named: "")//"pro_pic1.png")
 
 //onPaymentSuccess
 struct API {
+
+
+
     static let strVersion:String  = "Ver. No.: 1.620200407"
     static let strGameID:String   = "6616E8DC-917C-473D-ACA1-4540D7AC9488"
 
-    static let hostName:String    = "http://apnabazaar.shopping/" //"\(bundleDisplayName == "TestCraft" ? "https://webservice.testcraft.in/" : "http://demowebservice.testcraft.in/")" //"LIVE" : "TEST"
+    static let hostName:String    = "http://rgapp.admssvc.com/" //"\(bundleDisplayName == "TestCraft" ? "https://webservice.testcraft.in/" : "http://demowebservice.testcraft.in/")" //"LIVE" : "TEST"
     static let baseUrl:String     = "\(hostName)Webservice.asmx/"
+
+    static let imageUrl:String     = "http://rgapp.admssvc.com/"
+
+//    if let imgurl = arrMyPackageList[indexPath.row].BannerIcon {
+//        cell.imgBackGround.sd_setImage(with: URL(string: API.imageUrl + imgurl))
+//    }
+
+    static let Get_Task = "\(baseUrl)Get_Task"
+
+    static let Add_DeviceNotification = "\(baseUrl)Add_DeviceNotification"
+
+    static let Get_Post_Comment_By_PostUserID = "\(baseUrl)Get_Post_Comment_By_PostUserID"
+
+    static let Insert_Comment = "\(baseUrl)Insert_Comment"
+
+    static let uploadImageUrl:String = "http://rgapp.admssvc.com/UploadImage.ashx"
+
+    static let uploadCommentImage:String = "http://rgapp.admssvc.com/UploadTask/"
+
+    static let Send_OTP = "\(baseUrl)Send_OTP"
+
+    static let Create_User = "\(baseUrl)Create_User"
+
+    static let AddPoint = "\(baseUrl)AddPoint"
+
+    static let Get_NotficationList = "\(baseUrl)Get_NotficationList"
+
+    static let GetLike = "\(baseUrl)GetLike"
+
+
+
 }
 // MARK: - ActivityIndicatorPresenter
 
@@ -579,13 +613,13 @@ extension UITextField {
 }
 
 
-//import Alamofire
-//
-//class Connectivity {
-//    class func isConnectedToInternet() -> Bool {
-//        return NetworkReachabilityManager()!.isReachable
-//    }
-//}
+import Alamofire
+
+class Connectivity {
+    class func isConnectedToInternet() -> Bool {
+        return NetworkReachabilityManager()!.isReachable
+    }
+}
 
 //struct FontHelper {
 //    static func regular(size: CGFloat) -> UIFont {

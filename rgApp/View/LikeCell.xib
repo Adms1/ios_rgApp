@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LikeCell" rowHeight="60" id="Elg-1O-CwE" customClass="LikeCell" customModule="rgApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Elg-1O-CwE" id="uhm-OJ-1MU">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6Q-mY-PxZ">
+                        <rect key="frame" x="10" y="10" width="300" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Mehul Modhvadiya" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMm-Iv-GCU">
+                                <rect key="frame" x="55" y="18" width="235" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMZ-0d-1Zt">
+                                <rect key="frame" x="10" y="7.5" width="35" height="35"/>
+                                <color key="backgroundColor" red="0.32941176470588235" green="0.58039215686274503" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="Kyz-yW-E1q"/>
+                                    <constraint firstAttribute="height" constant="35" id="eOu-N8-41i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vMZ-0d-1Zt" firstAttribute="leading" secondItem="H6Q-mY-PxZ" secondAttribute="leading" constant="10" id="3No-Jk-vMJ"/>
+                            <constraint firstAttribute="height" constant="50" id="6tf-hS-FE1"/>
+                            <constraint firstItem="vMZ-0d-1Zt" firstAttribute="centerY" secondItem="H6Q-mY-PxZ" secondAttribute="centerY" id="FJs-8X-afe"/>
+                            <constraint firstAttribute="trailing" secondItem="eMm-Iv-GCU" secondAttribute="trailing" constant="10" id="hXY-op-Nc4"/>
+                            <constraint firstItem="eMm-Iv-GCU" firstAttribute="centerY" secondItem="H6Q-mY-PxZ" secondAttribute="centerY" id="qKY-eg-oNW"/>
+                            <constraint firstItem="eMm-Iv-GCU" firstAttribute="leading" secondItem="vMZ-0d-1Zt" secondAttribute="trailing" constant="10" id="uS5-gX-zuw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.87724659969999996" green="0.87724659969999996" blue="0.87724659969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="H6Q-mY-PxZ" firstAttribute="top" secondItem="uhm-OJ-1MU" secondAttribute="top" constant="10" id="5He-Fd-zce"/>
+                    <constraint firstAttribute="bottom" secondItem="H6Q-mY-PxZ" secondAttribute="bottom" id="MOc-QS-UGT"/>
+                    <constraint firstItem="H6Q-mY-PxZ" firstAttribute="leading" secondItem="uhm-OJ-1MU" secondAttribute="leading" constant="10" id="qD6-tq-0p2"/>
+                    <constraint firstAttribute="trailing" secondItem="H6Q-mY-PxZ" secondAttribute="trailing" constant="10" id="vpy-26-SYS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="Th7-ca-aTR"/>
+            <connections>
+                <outlet property="lblName" destination="vMZ-0d-1Zt" id="PCF-f9-kGP"/>
+                <outlet property="lblUserName" destination="eMm-Iv-GCU" id="sHO-o6-f8T"/>
+                <outlet property="vwNotification" destination="H6Q-mY-PxZ" id="qwH-HV-gvW"/>
+            </connections>
+            <point key="canvasLocation" x="-200.00000000000003" y="54.910714285714285"/>
+        </tableViewCell>
+    </objects>
+</document>
